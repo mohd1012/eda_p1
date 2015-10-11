@@ -8,7 +8,7 @@ dt2$d <- as.Date(dt2$Date,"%d/%m/%Y")
 
 dt2$t <- as.POSIXct(strptime(paste(dt2$Date, dt2$Time),"%d/%m/%Y %H:%M:%S"))
 
-# (5). Create png file for Plot 3.  The hex RGB value for the bar colour was taken from the example
+
 png(filename = "plot3.png", width=480, height=480)
 plot(dt2$t, dt2$Sub_metering_1, type = "n", xlab="", ylab="Energy sub metering")
 points(dt2$t, dt2$Sub_metering_1, col = "black", type = "l")
